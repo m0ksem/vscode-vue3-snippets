@@ -1,0 +1,50 @@
+{
+	"name": "vscode-vue3-snippets",
+	"displayName": "Vue3 Snippet",
+	"description": "Vue3 snippets.",
+	"version": "0.0.1",
+	"repository": "https://github.com/m0ksem",
+	"author": "Maksym Nedoshev <m0ksem1337@gmail.com>",
+	"license": "MIT",
+	"publisher": "m0ksem",
+	"engines": {
+		"vscode": "^1.28.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "vue",
+				"path": "./dist/vue.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./dist/tsjs.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./dist/tsjs.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./dist/javascript.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./dist/typescript.json"
+			}
+		]
+	},
+	"scripts": {
+		"serve": "ts-node-dev ./src/index.ts",
+		"build": "ts-node ./src/index.ts"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.10",
+		"ts-node": "^10.4.0",
+		"ts-node-dev": "^1.1.8",
+		"typescript": "^4.5.5"
+	}
+}
