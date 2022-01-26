@@ -1,5 +1,19 @@
+import { Snippets } from "../../types/vscode";
 import script from "./script";
+import style from "./style"
+
+const generateTagPrefix = (snippets: Snippets) => {
+  return Object.keys(snippets).reduce((copy, key) => {
+    copy[key + ' tag'] = {
+      ...copy[key],
+      prefix: `<${copy[key].prefix}>`
+    }
+
+    return copy
+  }, { ...snippets })
+}
 
 export default {
-  ...script
+  ...generateTagPrefix(script),
+  ...generateTagPrefix(style),
 }
