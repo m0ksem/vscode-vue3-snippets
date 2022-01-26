@@ -10,5 +10,9 @@ export const writeToDist = (filePath: string, data: string) => {
     mkdirSync(dirPath, { recursive: true })
   }
 
+  if (existsSync(absolutePath)) {
+    rmSync(absolutePath)
+  }
+
   writeFileSync(absolutePath, data, { flag: 'wx' })
 }

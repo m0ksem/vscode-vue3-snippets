@@ -26,25 +26,17 @@
 			{
 				"language": "typescript",
 				"path": "./dist/tsjs.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./dist/javascript.json"
-			},
-			{
-				"language": "typescript",
-				"path": "./dist/typescript.json"
 			}
 		]
 	},
 	"scripts": {
-		"serve": "ts-node-dev ./src/index.ts",
+		"serve": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node src/index.ts\" -e ts",
 		"build": "ts-node ./src/index.ts"
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.10",
+		"nodemon": "^2.0.15",
 		"ts-node": "^10.4.0",
-		"ts-node-dev": "^1.1.8",
 		"typescript": "^4.5.5"
 	}
 }
