@@ -1,6 +1,6 @@
 {
-	"name": "vscode-vue3-snippets",
-	"displayName": "Vue3 Snippet",
+	"name": "m0ksem-vue-snippets",
+	"displayName": "Vue3 Snippets",
 	"description": "Vue3 snippets.",
 	"version": "0.0.1",
 	"repository": "https://github.com/m0ksem",
@@ -31,12 +31,15 @@
 	},
 	"scripts": {
 		"serve": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node src/index.ts\" -e ts",
-		"build": "ts-node ./src/index.ts"
+		"build": "ts-node ./src/index.ts",
+		"package": "vsce package",
+		"publish": "vsce publish"
 	},
 	"devDependencies": {
 		"@types/node": "^17.0.10",
 		"nodemon": "^2.0.15",
 		"ts-node": "^10.4.0",
-		"typescript": "^4.5.5"
+		"typescript": "^4.5.5",
+		"vsce": "^2.6.5"
 	}
 }
