@@ -1,43 +1,26 @@
 import { Snippets } from "../../types/vscode";
+import { createTag } from "../../utils/builders/create-tag";
+
+const createStyle = (attrs?: string) => createTag('style', attrs)
 
 export default {
-  "Style SCSS": {
-    prefix: 'style-scss',
-    body: `
-<style lang="scss">
-  $1
-</style>
-`,
+"Style SCSS": {
+  prefix: 'style-scss',
+  body: createStyle('lang="scss"'),
 },
 
-
-  "Style SCSS scoped": {
-    prefix: 'style-scss-scoped',
-    body: `
-<style lang="scss" scoped>
-  $1
-</style>
-`,
+"Style SCSS scoped": {
+  prefix: 'style-scss-scoped',
+  body: createStyle('lang="scss" scoped'),
 },
-
 
 "Style CSS": {
-  prefix: 'style-css-scoped',
-  body: `
-<style>
-$1
-</style>
-`,
+  prefix: 'style-css',
+  body: createStyle(),
 },
 
 "Style CSS scoped": {
   prefix: 'style-css-scoped',
-  body: `
-<style scoped>
-$1
-</style>
-`,
+  body: createStyle('scoped')
 },
-
-
 } as Snippets

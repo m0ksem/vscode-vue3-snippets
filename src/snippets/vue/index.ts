@@ -1,6 +1,7 @@
 import { Snippets } from "../../types/vscode";
 import script from "./script";
 import style from "./style"
+import template from "./template";
 
 const generateTagPrefix = (snippets: Snippets) => {
   return Object.keys(snippets).reduce((copy, key) => {
@@ -16,4 +17,5 @@ const generateTagPrefix = (snippets: Snippets) => {
 export default {
   ...generateTagPrefix(script),
   ...generateTagPrefix(style),
+  ...generateTagPrefix(template),
 }
