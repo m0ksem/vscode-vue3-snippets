@@ -2,7 +2,7 @@
 	"name": "m0ksem-vue-snippets",
 	"displayName": "Vue3 Snippets",
 	"description": "Vue3 snippets.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": "https://github.com/m0ksem",
 	"author": "Maksym Nedoshev <m0ksem1337@gmail.com>",
 	"license": "MIT",
